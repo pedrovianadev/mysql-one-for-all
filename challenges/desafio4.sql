@@ -1,6 +1,6 @@
 SELECT
     P.pessoa_nome AS pessoa_usuaria,
-        IF(MAX(YEAR(historico_data_reproducao)) >= 2021,
+        IF(MAX(YEAR(data_reproducao)) >= 2021,
         'Ativa',
         'Inativa'
         ) AS status_pessoa_usuaria

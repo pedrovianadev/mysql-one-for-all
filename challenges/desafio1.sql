@@ -49,7 +49,7 @@ CREATE TABLE SpotifyClone.seguindo(
 CREATE TABLE SpotifyClone.historico(
     pessoa_id INT,
     cancao_id INT,
-    historico_data_reproducao DATETIME NOT NULL,
+    data_reproducao DATETIME NOT NULL,
     PRIMARY KEY (pessoa_id, cancao_id),
     FOREIGN KEY (pessoa_id) REFERENCES pessoa(pessoa_id),
     FOREIGN KEY (cancao_id) REFERENCES cancoes(cancao_id)
@@ -125,7 +125,7 @@ VALUES
   ('9', '3'),
   ('10', '2');
 
-INSERT INTO SpotifyClone.historico (pessoa_id, cancao_id, historico_data_reproducao)
+INSERT INTO SpotifyClone.historico (pessoa_id, cancao_id, data_reproducao)
 VALUES
   ('1', '2', '2020-05-02 05:30:35'),
   ('1', '8', '2022-02-28 10:45:55'),
